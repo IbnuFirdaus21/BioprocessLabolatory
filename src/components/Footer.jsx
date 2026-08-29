@@ -1,0 +1,65 @@
+import { Link } from "react-router-dom";
+import { siteInfo, socialLinks, footerInfo } from "../data/content";
+import { navLinks } from "../data/navLinks";
+import "./Footer.css";
+
+const socialGlyph = {
+  instagram: "IG",
+  facebook: "FB",
+  tiktok: "TT",
+};
+
+function Footer() {
+  return (
+    <footer className="footer">
+      <div className="container footer-grid">
+        <div className="footer-brand">
+          <h3 className="footer-brand-name">{siteInfo.name}</h3>
+          <p className="footer-brand-sub">{siteInfo.affiliation}</p>
+        </div>
+
+        <div className="footer-col">
+          <p className="eyebrow footer-col-title">{footerInfo.helpTitle}</p>
+          <p className="footer-col-text">{footerInfo.helpText}</p>
+          <p className="footer-col-text">{footerInfo.helpContact}</p>
+        </div>
+
+        <div className="footer-col">
+          <p className="eyebrow footer-col-title">Navigasi</p>
+          {navLinks.map((link) => (
+            <Link key={link.label} to={link.href} className="footer-col-link">
+              {link.label}
+            </Link>
+          ))}
+        </div>
+
+        <div className="footer-col">
+          <p className="eyebrow footer-col-title">Sosial Media</p>
+          <div className="footer-social">
+            {socialLinks.map((s) => (
+              <a
+                key={s.name}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.name}
+                className="footer-social-link"
+              >
+                {socialGlyph[s.icon] ?? s.name[0]}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="container footer-bottom">
+        <p className="footer-credit">{footerInfo.imageCredit}</p>
+        <p className="footer-copyright">
+          © {footerInfo.year} {siteInfo.name}. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  );
+}
+
+export default Footer;

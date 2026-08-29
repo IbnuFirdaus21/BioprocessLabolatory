@@ -1,0 +1,146 @@
+@import '@fontsource/space-grotesk/500.css';
+@import '@fontsource/space-grotesk/700.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/ibm-plex-mono/500.css';
+
+/* ---------- Design tokens ---------- */
+:root {
+  /* Color: forest greens from the lab's own logo + a warm brass accent
+     pulled from the certificates/medals in the "What's Hot" photo. */
+  --color-forest-900: #142B1D;   /* deepest bg, footer */
+  --color-forest-800: #1D3B27;   /* hero / section bg */
+  --color-forest-700: #2A5137;   /* card bg on dark */
+  --color-forest-500: #3E7A4F;   /* brand green, logo-adjacent */
+  --color-brass-400:  #C9A24B;   /* accent: achievement / highlight */
+  --color-brass-300:  #DFC280;   /* accent hover */
+  --color-cream-100:  #F7F4EC;   /* light bg */
+  --color-cream-050:  #FCFBF7;
+  --color-ink-900:    #14201A;   /* body text on light */
+  --color-ink-600:    #4B5A50;   /* secondary text on light */
+  --color-paper-90:   rgba(247,244,236,0.92); /* text on dark */
+  --color-paper-70:   rgba(247,244,236,0.72);
+
+  /* Type */
+  --font-display: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+  /* Layout */
+  --nav-height: 76px;
+  --container-w: 1200px;
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --shadow-card: 0 12px 28px rgba(20, 43, 29, 0.18);
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-height) + 12px);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-ink-900);
+  background: var(--color-cream-050);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.05;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p { margin: 0; line-height: 1.6; }
+
+a { color: inherit; text-decoration: none; }
+
+ul { list-style: none; margin: 0; padding: 0; }
+
+img { max-width: 100%; display: block; }
+
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+.container {
+  max-width: var(--container-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.btn-brass {
+  background: var(--color-brass-400);
+  color: var(--color-forest-900);
+}
+.btn-brass:hover { background: var(--color-brass-300); transform: translateY(-1px); }
+
+.btn-outline {
+  border: 1px solid var(--color-paper-70);
+  color: var(--color-paper-90);
+}
+.btn-outline:hover { border-color: var(--color-paper-90); }
+
+/* subtle noise texture reused on any dark green panel */
+.textured {
+  position: relative;
+  background-color: var(--color-forest-800);
+  background-image:
+    radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+/* shared section heading pattern, used by content sections on light bg */
+.section-eyebrow {
+  color: var(--color-forest-500);
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  color: var(--color-forest-800);
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  color: var(--color-ink-600);
+  max-width: 60ch;
+  margin-bottom: 44px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brass-400);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

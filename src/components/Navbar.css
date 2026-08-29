@@ -1,0 +1,129 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-cream-050);
+  border-bottom: 1px solid rgba(20, 43, 29, 0.08);
+}
+
+.navbar-inner {
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.navbar-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-forest-800);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.navbar-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.navbar-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  color: var(--color-forest-800);
+  white-space: nowrap;
+}
+
+/* ---- Desktop horizontal nav ---- */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-link {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink-600);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.navbar-link:hover {
+  color: var(--color-forest-800);
+  background: rgba(62, 122, 79, 0.08);
+}
+
+/* ---- Mobile hamburger ---- */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.navbar-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--color-forest-800);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.navbar-toggle.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.navbar-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.navbar-toggle.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.navbar-mobile {
+  display: none;
+  flex-direction: column;
+  background: var(--color-cream-050);
+  border-top: 1px solid rgba(20, 43, 29, 0.08);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.25s ease;
+}
+
+.navbar-mobile.is-open {
+  max-height: 320px;
+}
+
+.navbar-mobile-link {
+  padding: 16px 24px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-ink-900);
+  border-bottom: 1px solid rgba(20, 43, 29, 0.06);
+}
+
+@media (max-width: 860px) {
+  .navbar-links { display: none; }
+  .navbar-toggle { display: flex; }
+  .navbar-mobile { display: flex; }
+}

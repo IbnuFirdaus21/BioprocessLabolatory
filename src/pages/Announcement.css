@@ -1,0 +1,38 @@
+.announcement-page {
+  padding: 88px 0 120px;
+  min-height: 60vh;
+}
+
+.announcement-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.announcement-card {
+  background: var(--color-cream-100);
+  border-left: 3px solid var(--color-brass-400);
+  border-radius: var(--radius-sm);
+  padding: 28px 32px;
+}
+
+.announcement-date {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-forest-500);
+  margin-bottom: 12px;
+}
+
+.announcement-title {
+  font-size: 1.2rem;
+  color: var(--color-forest-800);
+  margin-bottom: 10px;
+}
+
+.announcement-content {
+  color: var(--color-ink-600);
+  max-width: 70ch;
+}

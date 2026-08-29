@@ -1,0 +1,48 @@
+.hero {
+  color: var(--color-paper-90);
+  padding: 72px 0 96px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.hero-eyebrow {
+  color: var(--color-brass-400);
+  margin-bottom: 18px;
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  color: var(--color-cream-050);
+  max-width: 14ch;
+  margin-bottom: 24px;
+}
+
+.hero-description {
+  color: var(--color-paper-70);
+  font-size: 1.05rem;
+  max-width: 52ch;
+  margin-bottom: 36px;
+}
+
+/* Real photo: a background-removed cutout that sits directly on the
+   textured hero background - no box, no border, no color behind it. */
+.hero-visual img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 24px 40px rgba(0, 0, 0, 0.35));
+}
+
+@media (max-width: 860px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-visual { order: -1; max-width: 360px; margin: 0 auto; }
+}
