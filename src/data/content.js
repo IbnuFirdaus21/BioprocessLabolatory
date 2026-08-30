@@ -28,8 +28,8 @@ export const getToKnowUs = {
 
 export const socialLinks = [
   { name: "Instagram", url: "https://instagram.com/", icon: "instagram" },
-  { name: "Facebook", url: "https://facebook.com/", icon: "facebook" },
-  { name: "TikTok", url: "https://tiktok.com/", icon: "tiktok" },
+  { name: "Line", url: "https://line.me/", icon: "line" },
+  { name: "LinkedIn", url: "https://linkedin.com/", icon: "linkedin" },
 ];
 
 export const footerInfo = {

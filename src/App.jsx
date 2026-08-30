@@ -6,9 +6,6 @@ import Announcement from "./pages/Announcement";
 import Material from "./pages/Material";
 
 function AppContent() {
-  const location = useLocation();
-  const hideFooter = location.pathname === "/material";
-
   return (
     <>
       <Navbar />
@@ -19,7 +16,7 @@ function AppContent() {
           <Route path="/material" element={<Material />} />
         </Routes>
       </main>
-      {!hideFooter && <Footer />}
+      <Footer />
     </>
   );
 }

@@ -63,6 +63,12 @@
   color: var(--color-brass-400);
 }
 
+.footer-social-link img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
 .footer-bottom {
   display: flex;
   justify-content: space-between;

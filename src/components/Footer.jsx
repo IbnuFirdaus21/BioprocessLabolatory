@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 import { siteInfo, socialLinks, footerInfo } from "../data/content";
 import { navLinks } from "../data/navLinks";
+import instagramIcon from "../assets/icons/instagram.png";
+import lineIcon from "../assets/icons/line.png";
+import linkedinIcon from "../assets/icons/linkedin.png";
 import "./Footer.css";
 
-const socialGlyph = {
-  instagram: "IG",
-  facebook: "FB",
-  tiktok: "TT",
+const socialIcons = {
+  instagram: instagramIcon,
+  line: lineIcon,
+  linkedin: linkedinIcon,
 };
 
 function Footer() {
@@ -45,7 +48,7 @@ function Footer() {
                 aria-label={s.name}
                 className="footer-social-link"
               >
-                {socialGlyph[s.icon] ?? s.name[0]}
+                <img src={socialIcons[s.icon]} alt={s.name} />
               </a>
             ))}
           </div>
