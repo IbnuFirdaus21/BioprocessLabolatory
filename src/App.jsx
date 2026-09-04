@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Announcement from "./pages/Announcement";
 import Material from "./pages/Material";
+import SafetyInduction from "./pages/SafetyInduction";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -26,6 +27,7 @@ function AppContent() {
           <Route path="/" element={<Home />} />
           <Route path="/announcement" element={<Announcement />} />
           <Route path="/material" element={<Material />} />
+          <Route path="/safety-induction" element={<SafetyInduction />} />
         </Routes>
       </main>
       <Footer />

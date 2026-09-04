@@ -31,17 +31,23 @@ function Navbar() {
                   {link.label}
                 </button>
                 <div className="navbar-dropdown-menu">
-                  {link.items.map((item) => (
-                    <a
-                      key={item.label}
-                      href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="navbar-dropdown-item"
-                    >
-                      {item.label}
-                    </a>
-                  ))}
+                  {link.items.map((item) =>
+                    item.internal ? (
+                      <Link key={item.label} to={item.href} className="navbar-dropdown-item">
+                        {item.label}
+                      </Link>
+                    ) : (
+                      <a
+                        key={item.label}
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="navbar-dropdown-item"
+                      >
+                        {item.label}
+                      </a>
+                    )
+                  )}
                 </div>
               </div>
             ) : (
@@ -88,17 +94,28 @@ function Navbar() {
                   openMobileDropdown === link.label ? " is-open" : ""
                 }`}
               >
-                {link.items.map((item) => (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="navbar-mobile-submenu-item"
-                  >
-                    {item.label}
-                  </a>
-                ))}
+                {link.items.map((item) =>
+                  item.internal ? (
+                    <Link
+                      key={item.label}
+                      to={item.href}
+                      className="navbar-mobile-submenu-item"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="navbar-mobile-submenu-item"
+                    >
+                      {item.label}
+                    </a>
+                  )
+                )}
               </div>
             </div>
           ) : (

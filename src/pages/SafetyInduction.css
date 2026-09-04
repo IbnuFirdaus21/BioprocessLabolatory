@@ -1,0 +1,73 @@
+.safety-induction {
+    padding: 88px 0;
+    color: var(--color-paper-90);
+}
+
+.safety-induction-eyebrow {
+    color: var(--color-brass-400);
+    margin-bottom: 14px;
+}
+
+.safety-induction-title {
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    color: var(--color-cream-050);
+    margin-bottom: 12px;
+}
+
+.safety-induction-subtitle {
+    color: var(--color-paper-70);
+    max-width: 60ch;
+    margin-bottom: 44px;
+}
+
+.safety-induction-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.safety-induction-card {
+    background: var(--color-forest-700);
+    border-radius: var(--radius-md);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.safety-induction-card-title {
+    font-size: 1.05rem;
+    color: var(--color-cream-050);
+    margin-bottom: 10px;
+}
+
+.safety-induction-card-description {
+    color: var(--color-paper-70);
+    font-size: 0.92rem;
+}
+
+.safety-induction-card-link {
+    align-self: flex-start;
+}
+
+@media (max-width: 900px) {
+    .safety-induction-list { grid-template-columns: 1fr; }
+}
+
+.safety-induction-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: #000;
+}
+
+.safety-induction-video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}

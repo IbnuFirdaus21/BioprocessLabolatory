@@ -1,6 +1,7 @@
 // Home links point to in-page section anchors; Announcement is a separate route.
-// "dropdown" type items open a submenu of external links on hover (desktop)
-// or tap (mobile) instead of navigating directly.
+// "dropdown" type items open a submenu on hover (desktop) or tap (mobile).
+// Dropdown items are external links by default (open in new tab);
+// set "internal: true" on an item to navigate inside the site instead.
 export const navLinks = [
   { label: "Beranda", href: "/", type: "route" },
   { label: "Announcement", href: "/announcement", type: "route" },
@@ -11,7 +12,7 @@ export const navLinks = [
       { label: "Practical Schedules", href: "https://drive.google.com/drive/folders/1UnDNmwSa5_DTrNJletuIkxcraOje5uPL?usp=drive_link" },
       { label: "Guidebook", href: "https://drive.google.com/drive/folders/19fFd7a_8MiaS6ZM6zOEWvAxe5vbQrT3A?usp=drive_link" },
       { label: "Workbook", href: "https://drive.google.com/drive/folders/16C9j7YNM0x4o7MjDEDBnGmjAsc5Zss2c?usp=drive_link" },
-      { label: "Safety Induction", href: "https://drive.google.com/drive/folders/1rwCKxYk3tJQpK4m2rS7lRyqwzijWhH35?usp=drive_link" },
+      { label: "Safety Induction", href: "/safety-induction", internal: true },
     ],
   },
   { label: "Material", href: "/material", type: "anchor" },
