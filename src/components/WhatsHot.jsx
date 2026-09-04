@@ -1,25 +1,29 @@
 import { whatsHot } from "../data/content";
+import Reveal from "./Reveal";
 import "./WhatsHot.css";
-import WhatsHotImage from "../assets/images/whatshot.png";
+import achievementPhoto from "../assets/images/whatshot.png";
 
 function WhatsHot() {
   return (
     <section className="whats-hot">
       <div className="container whats-hot-grid">
-        <img
-          src={WhatsHotImage}
-          alt="Prestasi mahasiswa"
-          className="whats-hot-placeholder"
-        />
+        <Reveal className="whats-hot-photo">
+          <img
+            src={achievementPhoto}
+            alt="Prestasi mahasiswa"
+            className="whats-hot-placeholder"
+          />
+        </Reveal>
 
-        <div className="whats-hot-copy">
+        <Reveal className="whats-hot-copy" delay={150}>
           <p className="eyebrow whats-hot-eyebrow">{whatsHot.eyebrow}</p>
           <h2 className="whats-hot-title">{whatsHot.title}</h2>
           <p className="whats-hot-description">{whatsHot.description}</p>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
 }
 
 export default WhatsHot;
+

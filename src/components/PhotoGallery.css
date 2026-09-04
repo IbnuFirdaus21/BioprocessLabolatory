@@ -27,16 +27,17 @@
   max-width: 46ch;
 }
 
-/* Compact overlapping "photo pile": CSS multi-column lets the browser
-   balance 9 photos into 3 short columns instead of one tall 3x3 grid,
-   and the negative margin makes consecutive photos in a column overlap
-   each other like a scattered stack of prints. */
 .gallery-photos {
   columns: 3;
   column-gap: 18px;
   max-width: 460px;
   margin: 0 auto;
   padding: 12px;
+}
+
+.gallery-reveal-item {
+  margin-bottom: -30px;
+  break-inside: avoid;
 }
 
 .gallery-polaroid {
@@ -46,8 +47,6 @@
   box-shadow: var(--shadow-card);
   transform: rotate(var(--rotate));
   transition: transform 0.2s ease;
-  margin-bottom: -30px;
-  break-inside: avoid;
   position: relative;
 }
 
