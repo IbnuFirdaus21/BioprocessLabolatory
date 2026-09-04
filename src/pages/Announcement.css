@@ -13,7 +13,7 @@
 
 .announcement-card {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 24px;
   min-height: 300px;
   background: var(--color-cream-100);
@@ -23,24 +23,29 @@
 }
 
 .announcement-card-image {
-  width: auto;
-  height: auto;
-  max-width: 220px;
-  max-height: 220px;
+  width: 220px;
+  height: 220px;
+  align-self: center;
   flex-shrink: 0;
   border-radius: var(--radius-sm);
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .announcement-card-image-empty {
-  width: 140px;
-  height: 140px;
+  width: 220px;
+  height: 220px;
+  align-self: center;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
   background: linear-gradient(155deg, var(--color-forest-500), var(--color-forest-700));
 }
 
 .announcement-card-body {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .announcement-date {
