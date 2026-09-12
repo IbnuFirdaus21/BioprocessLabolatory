@@ -1,12 +1,15 @@
 .hero {
   color: var(--color-paper-90);
   padding: 72px 0 96px;
+  min-height: calc(100vh - var(--nav-height));
+  display: flex;
+  align-items: center;
 }
 
 .hero-bg-photo {
   position: relative;
   background-size: cover;
-  background-position: center;
+  background-position: center 15%;
 }
 
 .hero-bg-photo::before {

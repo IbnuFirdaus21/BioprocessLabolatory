@@ -6,7 +6,7 @@
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  grid-template-columns: 1.3fr 1fr 1fr;
   gap: 32px;
   padding-bottom: 48px;
   border-bottom: 1px solid rgba(247, 244, 236, 0.1);
@@ -85,7 +85,7 @@
 }
 
 @media (max-width: 860px) {
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr 1fr; }
 }
 
 @media (max-width: 520px) {
