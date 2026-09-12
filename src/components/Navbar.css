@@ -12,6 +12,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+  max-width: 100%;
+  padding: 0 50px;
 }
 
 .navbar-brand {
@@ -99,6 +101,11 @@
   transform: translateY(-6px);
   transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
   z-index: 200;
+}
+
+.navbar-dropdown:last-child .navbar-dropdown-menu {
+  left: auto;
+  right: 0;
 }
 
 .navbar-dropdown:hover .navbar-dropdown-menu,
