@@ -16,7 +16,7 @@ export const materials = [
   },
   {
     id: "mat-3",
-    title: "Modul 3 - Pertumbuhan Mikroba",
+    title: "Modul 3 - Asam asetat",
     description: "Penjelasan umum mengenai asam asetat, macam-macam proses pembuatannya, dan alasan pemilihan bahan baku",
     fileUrl: "/materials/modul-3.pdf",
     videoUrl: "https://www.youtube.com/watch?v=xsw1ESdrdaM",
