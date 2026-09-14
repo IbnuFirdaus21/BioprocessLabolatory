@@ -4,7 +4,7 @@ export const materials = [
     id: "mat-1",
     title: "Modul 1 - Alkohol",
     description: "Penjelasan umum tentang alkohol, manfaat alkohol, alasan pemilihan bahan baku (sesuai LKR) digunakan menjadi etanol, dan pentingnya praktikum alkohol.",
-    fileUrl: "https://drive.google.com/drive/folders/1wY5TK8MzdSWFpbKLMsVnE0-iDUbYvTWA",
+    fileUrl: "https://drive.google.com/file/d/1TfFR9vLjc8tZs00A3qYWwtRH9yPw5L9Y/view?usp=sharing",
     videoUrl: "https://www.youtube.com/watch?v=xsw1ESdrdaM",
   },
   {
