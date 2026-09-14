@@ -2,9 +2,9 @@
 export const materials = [
   {
     id: "mat-1",
-    title: "Modul 1 - Fermentasi Dasar",
-    description: "Pengenalan proses fermentasi anaerobik dan pengukuran laju pertumbuhan mikroba.",
-    fileUrl: "/materials/modul-1.pdf",
+    title: "Modul 1 - Alkohol",
+    description: "Penjelasan umum tentang alkohol, manfaat alkohol, alasan pemilihan bahan baku (sesuai LKR) digunakan menjadi etanol, dan pentingnya praktikum alkohol.",
+    fileUrl: "https://drive.google.com/drive/folders/1wY5TK8MzdSWFpbKLMsVnE0-iDUbYvTWA",
     videoUrl: "https://www.youtube.com/watch?v=xsw1ESdrdaM",
   },
   {
