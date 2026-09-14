@@ -23,7 +23,6 @@ function Footer() {
         <div className="footer-col">
           <p className="eyebrow footer-col-title">{footerInfo.helpTitle}</p>
           <p className="footer-col-text">{footerInfo.helpText}</p>
-          <p className="footer-col-text">{footerInfo.helpContact}</p>
         </div>
 
         <div className="footer-col">

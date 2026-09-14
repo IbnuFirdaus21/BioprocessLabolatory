@@ -35,7 +35,6 @@ export const socialLinks = [
 export const footerInfo = {
   helpTitle: "Dapatkan Bantuan",
   helpText: "Panduan · Hubungi Kami",
-  helpContact: "08xx-xxx-xxxx",
   imageCredit:
     "Kredit gambar: foto sampel dan dokumentasi kegiatan lab digunakan untuk kebutuhan ilustrasi non-komersial.",
   year: new Date().getFullYear(),
