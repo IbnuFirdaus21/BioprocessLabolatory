@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { announcements } from "../data/announcements";
 import Reveal from "../components/Reveal";
 import "./Announcement.css";
@@ -41,6 +42,9 @@ function Announcement() {
                 </time>
                 <h2 className="announcement-title">{item.title}</h2>
                 <p className="announcement-content">{item.content}</p>
+                <Link to={`/announcement/${item.id}`} className="announcement-read-more">
+                  Baca selengkapnya &rarr;
+                </Link>
               </div>
             </Reveal>
           ))}

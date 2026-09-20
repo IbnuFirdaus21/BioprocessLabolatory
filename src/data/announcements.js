@@ -21,7 +21,7 @@ export const announcements = [
     image: announcementImage1,
   },
   {
-    id: "an-2",
+    id: "an-3",
     date: "2026-08-10",
     title: "Pengumpulan Laporan Akhir",
     content:

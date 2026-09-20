@@ -67,6 +67,22 @@
 .announcement-content {
   color: var(--color-ink-600);
   max-width: 70ch;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.announcement-read-more {
+  display: inline-block;
+  margin-top: 16px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-forest-500);
+}
+.announcement-read-more:hover {
+  color: var(--color-forest-800);
 }
 
 @media (max-width: 640px) {
