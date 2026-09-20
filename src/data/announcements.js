@@ -20,4 +20,12 @@ export const announcements = [
       "Batas pengumpulan laporan akhir praktikum adalah H+7 setelah sesi praktikum terakhir. Keterlambatan akan mempengaruhi nilai akhir.",
     image: announcementImage1,
   },
+  {
+    id: "an-2",
+    date: "2026-08-10",
+    title: "Pengumpulan Laporan Akhir",
+    content:
+      "Batas pengumpulan laporan akhir praktikum adalah H+7 setelah sesi praktikum terakhir. Keterlambatan akan mempengaruhi nilai akhir.",
+    image: announcementImage1,
+  },
 ];
