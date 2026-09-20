@@ -8,8 +8,8 @@ export const hero = {
   title: "Welcome to your fermentation journey!",
   description:
     "The Bioprocess Laboratory is a student-centered facility designed to support experiments and research in biochemical and biotechnological processes. It enables students to learn about fermentation, enzyme kinetics, and microbial growth operations through hands-on practice with lab-scale equipment.",
-  ctaLabel: "Practical Needs",
-  ctaHref: "#practical-needs",
+  ctaLabel: "Material",
+  ctaHref: "/material",
 };
 
 export const whatsHot = {
