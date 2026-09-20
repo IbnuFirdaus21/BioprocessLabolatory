@@ -25,6 +25,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   transform: rotate(-1.5deg);
+  object-fit: cover;
 }
 
 .whats-hot-eyebrow {
@@ -45,7 +46,11 @@
 
 @media (max-width: 860px) {
   .whats-hot-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
-  .whats-hot-placeholder { max-width: 420px; margin: 0 auto; }
+  .whats-hot-placeholder {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+  }
 }

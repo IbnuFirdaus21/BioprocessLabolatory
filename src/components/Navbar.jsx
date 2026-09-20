@@ -5,6 +5,29 @@ import { siteInfo } from "../data/content";
 import logo from "../assets/icons/icon.png";
 import "./Navbar.css";
 
+function Caret({ open = false }) {
+  return (
+    <span className={`navbar-caret${open ? " is-open" : ""}`} aria-hidden="true">
+      <svg
+        width="10"
+        height="6"
+        viewBox="0 0 10 6"
+        fill="none"
+        style={{ display: "block" }}
+        aria-hidden="true"
+      >
+        <path
+          d="M1 1l4 4 4-4"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </span>
+  );
+}
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
@@ -29,6 +52,7 @@ function Navbar() {
               <div className="navbar-dropdown" key={link.label}>
                 <button type="button" className="navbar-link navbar-dropdown-trigger">
                   {link.label}
+                  <Caret />
                 </button>
                 <div className="navbar-dropdown-menu">
                   {link.items.map((item) =>
@@ -88,6 +112,7 @@ function Navbar() {
                 aria-expanded={openMobileDropdown === link.label}
               >
                 {link.label}
+                <Caret open={openMobileDropdown === link.label} />
               </button>
               <div
                 className={`navbar-mobile-submenu${
