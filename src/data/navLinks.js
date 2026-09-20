@@ -1,10 +1,9 @@
-// Home links point to in-page section anchors; Announcement is a separate route.
+// Home links point to in-page section anchors.
 // "dropdown" type items open a submenu on hover (desktop) or tap (mobile).
 // Dropdown items are external links by default (open in new tab);
 // set "internal: true" on an item to navigate inside the site instead.
 export const navLinks = [
   { label: "Beranda", href: "/", type: "route" },
-  { label: "Announcement", href: "/announcement", type: "route" },
   {
     label: "Practical Needs",
     type: "dropdown",

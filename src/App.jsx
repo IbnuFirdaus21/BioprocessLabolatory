@@ -3,8 +3,6 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Announcement from "./pages/Announcement";
-import AnnouncementDetail from "./pages/AnnouncementDetail";
 import Material from "./pages/Material";
 import SafetyInduction from "./pages/SafetyInduction";
 
@@ -26,8 +24,6 @@ function AppContent() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/announcement" element={<Announcement />} />
-          <Route path="/announcement/:id" element={<AnnouncementDetail />} />
           <Route path="/material" element={<Material />} />
           <Route path="/safety-induction" element={<SafetyInduction />} />
         </Routes>
