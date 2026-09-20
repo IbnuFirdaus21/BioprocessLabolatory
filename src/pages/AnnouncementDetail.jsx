@@ -3,6 +3,8 @@ import { announcements } from "../data/announcements";
 import "./AnnouncementDetail.css";
 
 const URL_REGEX = /(https?:\/\/[^\s]+)/g;
+const BULLET = /^[-*]\s+(.*)$/;
+const NUMBERED = /^\d+\.\s+(.*)$/;
 
 function formatDate(dateStr) {
   return new Date(dateStr).toLocaleDateString("id-ID", {
@@ -27,6 +29,35 @@ function linkify(text) {
       </span>
     );
   });
+}
+
+// Teks -> blok paragraf (p), poin (ul), dan daftar bernomor (ol).
+// Baris kosong memisahkan paragraf. Baris berawalan "- " atau "* " jadi poin,
+// berawalan "1. " jadi daftar bernomor. Baris teks yang berurutan jadi satu paragraf.
+function parseBlocks(text) {
+  const blocks = [];
+  let current = null;
+  const push = (type, line) => {
+    if (current && current.type === type) {
+      current.lines.push(line);
+    } else {
+      current = { type, lines: [line] };
+      blocks.push(current);
+    }
+  };
+  for (const rawLine of text.replace(/\r\n/g, "\n").split("\n")) {
+    const line = rawLine.trim();
+    if (!line) {
+      current = null;
+      continue;
+    }
+    const bullet = line.match(BULLET);
+    const numbered = line.match(NUMBERED);
+    if (bullet) push("ul", bullet[1]);
+    else if (numbered) push("ol", numbered[1]);
+    else push("p", line);
+  }
+  return blocks;
 }
 
 function AnnouncementDetail() {
@@ -54,10 +85,7 @@ function AnnouncementDetail() {
   // Pakai "body" jika ada dan tidak kosong; jika tidak, pakai "content".
   const text =
     typeof item.body === "string" && item.body.trim() ? item.body : item.content ?? "";
-  const paragraphs = text
-    .split(/\n\s*\n/)
-    .map((p) => p.trim())
-    .filter(Boolean);
+  const blocks = parseBlocks(text);
 
   return (
     <section className="announcement-detail-page">
@@ -77,16 +105,36 @@ function AnnouncementDetail() {
           )}
 
           <div className="announcement-detail-body">
-            {paragraphs.map((p, i) => (
-              <p key={i}>
-                {p.split("\n").map((line, j) => (
-                  <span key={j}>
-                    {j > 0 && <br />}
-                    {linkify(line)}
-                  </span>
-                ))}
-              </p>
-            ))}
+            {blocks.map((block, i) => {
+              if (block.type === "ul") {
+                return (
+                  <ul key={i}>
+                    {block.lines.map((line, j) => (
+                      <li key={j}>{linkify(line)}</li>
+                    ))}
+                  </ul>
+                );
+              }
+              if (block.type === "ol") {
+                return (
+                  <ol key={i}>
+                    {block.lines.map((line, j) => (
+                      <li key={j}>{linkify(line)}</li>
+                    ))}
+                  </ol>
+                );
+              }
+              return (
+                <p key={i}>
+                  {block.lines.map((line, j) => (
+                    <span key={j}>
+                      {j > 0 && <br />}
+                      {linkify(line)}
+                    </span>
+                  ))}
+                </p>
+              );
+            })}
           </div>
         </article>
       </div>
