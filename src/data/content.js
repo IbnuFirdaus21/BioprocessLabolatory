@@ -7,7 +7,7 @@ export const hero = {
   eyebrow: "Laboratorium Bioproses",
   title: "Welcome to your fermentation journey!",
   description:
-    'The Bioprocess Laboratory is a student-centered facility designed to support experiments and research in biochemical and biotechnological processes. It enables students to learn about fermentation, enzyme kinetics, and microbial growth operations through hands-on practice with lab-scale equipment.`,
+    `The Bioprocess Laboratory is a student-centered facility designed to support experiments and research in biochemical and biotechnological processes. It enables students to learn about fermentation, enzyme kinetics, and microbial growth operations through hands-on practice with lab-scale equipment.`,
   ctaLabel: "Material",
   ctaHref: "/material",
 };
@@ -16,7 +16,7 @@ export const whatsHot = {
   eyebrow: "What's Hot",
   title: "Recent achievements",
   description:
-    `The Bioprocess kakakk is a student-centered facility designed to support experiments and research in biochemical and biotechnological processes. It enables students to learn about fermentation, enzyme kinetics, and microbial growth operations through hands-on practice with lab-scale equipment.`,
+    `The Bioprocess Labolatory is a student-centered facility designed to support experiments and research in biochemical and biotechnological processes. It enables students to learn about fermentation, enzyme kinetics, and microbial growth operations through hands-on practice with lab-scale equipment.`,
 };
 
 export const getToKnowUs = {
