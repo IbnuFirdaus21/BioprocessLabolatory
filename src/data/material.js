@@ -63,4 +63,11 @@ export const materials = [
     fileUrl: "https://drive.google.com/uc?export=download&id=1Rx8aHmGTD3Pr2TzfS_cb_ce-U5pcuH6O",
     videoUrl: "https://www.youtube.com/watch?v=xsw1ESdrdaM",
   },
+  {
+    id: "mat-10",
+    title: "Modul 10 - kimia",
+    description: "Penjelasan umum mengenai selulosa bakteri, bakteri penghasil selulosa (misal Acetobacter xylinum), proses pembentukan selulosa secara fermentasi.",
+    fileUrl: "https://drive.google.com/uc?export=download&id=1Rx8aHmGTD3Pr2TzfS_cb_ce-U5pcuH6O",
+    videoUrl: "https://www.youtube.com/watch?v=xsw1ESdrdaM",
+  },
 ];
