@@ -28,11 +28,8 @@
 .hero-grid {
   position: relative;
   z-index: 1;
-  box-sizing: content-box;
-  max-width: 600px;
-  margin: 0;
+  width: 100%;
   text-align: left;
-  padding-left: 60px;
 }
 
 .hero-eyebrow {
@@ -80,5 +77,16 @@
     animation: none;
     opacity: 1;
     transform: none;
+  }
+}
+
+/* Desktop: teks hero rata kiri dengan jarak 50px, sejajar dengan logo navbar */
+@media (min-width: 861px) {
+  .hero-grid {
+    width: auto;
+    box-sizing: content-box;
+    max-width: 600px;
+    margin: 0;
+    padding-left: 50px;
   }
 }

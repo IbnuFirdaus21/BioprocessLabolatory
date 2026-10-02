@@ -24,6 +24,7 @@ export const getToKnowUs = {
   title: "The people behind the ferment",
   description:
     `The Bioprocess Laboratory Assistants are the people who help bring learning beyond the classroom. As part of the laboratory community, they support students throughout practical activities, guide hands-on experiments, and help create a safe, collaborative, and engaging learning environment.
+    
     More than assisting experiments, they are here to facilitate learning, share knowledge, and grow together through every process. With curiosity, responsibility, and teamwork, they contribute to making the Bioprocess Laboratory a place where students can explore, experiment, and turn knowledge into experience.
     `,
 };

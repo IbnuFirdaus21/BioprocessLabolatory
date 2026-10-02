@@ -12,8 +12,6 @@
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  max-width: 100%;
-  padding: 0 50px;
 }
 
 .navbar-brand {
@@ -219,4 +217,12 @@
   .navbar-links { display: none; }
   .navbar-toggle { display: flex; }
   .navbar-mobile { display: flex; }
+}
+
+/* Desktop: navbar full-width dengan jarak kiri-kanan 50px */
+@media (min-width: 861px) {
+  .navbar-inner {
+    max-width: 100%;
+    padding: 0 50px;
+  }
 }
